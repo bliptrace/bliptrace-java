@@ -22,6 +22,9 @@ public final class Config {
     private final boolean enabled;
     private final String sdkName;
     private final String sdkVersion;
+    private final int maxRetries;
+    private final int retryBaseMs;
+    private final int retryCapMs;
 
     private Config(Builder b) {
         this.key = b.key;
@@ -37,6 +40,9 @@ public final class Config {
         this.enabled = b.enabled;
         this.sdkName = b.sdkName;
         this.sdkVersion = b.sdkVersion;
+        this.maxRetries = b.maxRetries;
+        this.retryBaseMs = b.retryBaseMs;
+        this.retryCapMs = b.retryCapMs;
     }
 
     public String key() {
@@ -91,6 +97,18 @@ public final class Config {
         return sdkVersion;
     }
 
+    public int maxRetries() {
+        return maxRetries;
+    }
+
+    public int retryBaseMs() {
+        return retryBaseMs;
+    }
+
+    public int retryCapMs() {
+        return retryCapMs;
+    }
+
     public static Builder builder() {
         return new Builder();
     }
@@ -110,6 +128,9 @@ public final class Config {
         private boolean enabled = true;
         private String sdkName = "g8scope-java";
         private String sdkVersion = "1.0.0";
+        private int maxRetries = 2;
+        private int retryBaseMs = 100;
+        private int retryCapMs = 2000;
 
         public Builder key(String key) {
             this.key = key;
@@ -173,6 +194,21 @@ public final class Config {
 
         public Builder sdkVersion(String sdkVersion) {
             this.sdkVersion = sdkVersion;
+            return this;
+        }
+
+        public Builder maxRetries(int maxRetries) {
+            this.maxRetries = maxRetries;
+            return this;
+        }
+
+        public Builder retryBaseMs(int retryBaseMs) {
+            this.retryBaseMs = retryBaseMs;
+            return this;
+        }
+
+        public Builder retryCapMs(int retryCapMs) {
+            this.retryCapMs = retryCapMs;
             return this;
         }
 
