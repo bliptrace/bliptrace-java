@@ -1,4 +1,4 @@
-# g8scope-java
+# bliptrace-java
 
 The runtime **Java SDK** for [g8scope](https://scope.g8suite.com) — a central,
 multi-tenant, runtime-agnostic error-capture platform. The SDK builds a
