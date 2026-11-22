@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.Map;
 
 Config config = Config.builder()
-        .key(System.getenv("G8SCOPE_INGEST_KEY"))   // ingest key — resolves your project server-side
+        .key(System.getenv("BLIPTRACE_INGEST_KEY"))   // ingest key — resolves your project server-side
         .endpoint("https://ingest.scope.g8suite.com")
         .environment("production")
         .release("my-app@2026.06.21")
