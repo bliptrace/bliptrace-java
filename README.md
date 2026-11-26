@@ -36,7 +36,7 @@ import java.util.Map;
 
 Config config = Config.builder()
         .key(System.getenv("BLIPTRACE_INGEST_KEY"))   // ingest key — resolves your project server-side
-        .endpoint("https://ingest.scope.g8suite.com")
+        .endpoint("https://ingest.bliptrace.com")
         .environment("production")
         .release("my-app@2026.06.21")
         .basePath("com.example.myapp")               // marks in-app stack frames
@@ -78,7 +78,7 @@ cannot claim to be another tenant. Keep your ingest key out of source control.
 | Option              | Default                               | Description                                            |
 |---------------------|---------------------------------------|--------------------------------------------------------|
 | `key`               | `null`                                | Ingest key. Capture is a no-op without it.             |
-| `endpoint`          | `https://ingest.scope.g8suite.com`    | Ingest base URL. `/v1/ingest` is appended.             |
+| `endpoint`          | `https://ingest.bliptrace.com`    | Ingest base URL. `/v1/ingest` is appended.             |
 | `environment`       | `production`                          | e.g. `production`, `staging`, `local`.                 |
 | `release`           | `null`                                | Release marker, e.g. `my-app@2026.06.21`.              |
 | `timeoutMillis`     | `3000`                                | HTTP timeout in milliseconds.                          |

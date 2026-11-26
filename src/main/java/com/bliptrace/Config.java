@@ -116,7 +116,7 @@ public final class Config {
     /** Fluent builder for {@link Config}. */
     public static final class Builder {
         private String key = null;
-        private String endpoint = "https://ingest.scope.g8suite.com";
+        private String endpoint = "https://ingest.bliptrace.com";
         private String environment = "production";
         private String release = null;
         private long timeoutMillis = 3000L;
