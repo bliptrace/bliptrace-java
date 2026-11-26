@@ -1,4 +1,4 @@
-package com.g8scope;
+package com.bliptrace;
 
 import java.util.List;
 import java.util.Map;

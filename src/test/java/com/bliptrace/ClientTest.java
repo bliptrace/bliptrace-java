@@ -1,4 +1,4 @@
-package com.g8scope;
+package com.bliptrace;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
@@ -36,7 +36,7 @@ class ClientTest {
         Config config = Config.builder()
                 .key("k")
                 .endpoint("http://api")
-                .basePath("com.g8scope")
+                .basePath("com.bliptrace")
                 .build();
 
         new Client(config, t).capture(new RuntimeException("boom"));
@@ -54,7 +54,7 @@ class ClientTest {
         assertNotNull(runtime.get("version"));
 
         Map<String, Object> sdk = map(env.get("sdk"));
-        assertEquals("g8scope-java", sdk.get("name"));
+        assertEquals("bliptrace-java", sdk.get("name"));
         assertEquals("1.0.0", sdk.get("version"));
 
         assertEquals("error", env.get("level"));

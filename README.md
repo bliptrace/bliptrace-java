@@ -1,8 +1,8 @@
 # bliptrace-java
 
-The runtime **Java SDK** for [g8scope](https://scope.g8suite.com) — a central,
+The runtime **Java SDK** for [Bliptrace](https://bliptrace.com) — a central,
 multi-tenant, runtime-agnostic error-capture platform. The SDK builds a
-language-neutral **error envelope** from a `Throwable` and ships it to the g8scope
+language-neutral **error envelope** from a `Throwable` and ships it to the bliptrace
 ingest API.
 
 - **Zero runtime dependencies** — uses only the JDK (`java.net.http.HttpClient`)
@@ -19,8 +19,8 @@ Maven coordinates:
 
 ```xml
 <dependency>
-    <groupId>com.g8scope</groupId>
-    <artifactId>g8scope</artifactId>
+    <groupId>com.bliptrace</groupId>
+    <artifactId>bliptrace-java</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
@@ -28,8 +28,8 @@ Maven coordinates:
 ## Usage
 
 ```java
-import com.g8scope.Client;
-import com.g8scope.Config;
+import com.bliptrace.Client;
+import com.bliptrace.Config;
 
 import java.util.List;
 import java.util.Map;
@@ -88,12 +88,12 @@ cannot claim to be another tenant. Keep your ingest key out of source control.
 | `scrubKeys`         | `[]`                                  | Context keys to redact (case-insensitive, recursive).  |
 | `basePath`          | `""`                                  | In-app package prefix used to mark `in_app` frames.    |
 | `enabled`           | `true`                                | Master switch.                                         |
-| `sdkName`           | `g8scope-java`                        | Reported SDK name.                                     |
+| `sdkName`           | `bliptrace-java`                        | Reported SDK name.                                     |
 | `sdkVersion`        | `1.0.0`                               | Reported SDK version.                                  |
 
 ## The envelope
 
-`Envelope.build(...)` returns a `Map<String,Object>` matching the g8scope v1 wire
+`Envelope.build(...)` returns a `Map<String,Object>` matching the Bliptrace v1 wire
 contract: `schema_version`, `event_id` (UUID v4), `occurred_at` (RFC 3339 UTC,
 millisecond precision), `runtime` (`{name:"java", version}`), `sdk`, `environment`,
 `release`, `level` (`Error` subclasses map to `fatal`, otherwise `error`),

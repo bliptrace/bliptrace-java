@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.g8scope</groupId>
-    <artifactId>g8scope</artifactId>
+    <groupId>com.bliptrace</groupId>
+    <artifactId>bliptrace-java</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>g8scope-java</name>
-    <description>Runtime Java SDK for the g8scope error-capture platform. Builds a language-neutral error envelope and ships it to the ingest API. Zero runtime dependencies.</description>
+    <name>bliptrace-java</name>
+    <description>Runtime Java SDK for the Bliptrace error-capture platform. Builds a language-neutral error envelope and ships it to the ingest API. Zero runtime dependencies.</description>
     <url>https://github.com/bliptrace/bliptrace-java</url>
 
     <licenses>

@@ -1,4 +1,4 @@
-package com.g8scope;
+package com.bliptrace;
 
 import java.net.URI;
 import java.net.http.HttpClient;

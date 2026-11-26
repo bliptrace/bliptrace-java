@@ -1,4 +1,4 @@
-package com.g8scope;
+package com.bliptrace;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -126,7 +126,7 @@ public final class Config {
         private List<String> scrubKeys = new ArrayList<>();
         private String basePath = "";
         private boolean enabled = true;
-        private String sdkName = "g8scope-java";
+        private String sdkName = "bliptrace-java";
         private String sdkVersion = "1.0.0";
         private int maxRetries = 2;
         private int retryBaseMs = 100;

@@ -1,4 +1,4 @@
-package com.g8scope;
+package com.bliptrace;
 
 import java.time.Instant;
 import java.time.ZoneOffset;
@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * Builds the language-neutral g8scope error envelope from a {@link Throwable}.
+ * Builds the language-neutral Bliptrace error envelope from a {@link Throwable}.
  * The result is a structured {@code Map<String,Object>} so callers and tests
  * can introspect it without parsing JSON.
  */
